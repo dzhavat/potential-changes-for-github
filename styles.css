@@ -1,0 +1,60 @@
+.potential-changes {
+    display: inline-block;
+    position: relative;
+}
+
+.potential-changes__button {
+    background-color: #eff3f6;
+    background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);
+    border: 1px solid rgba(27, 31, 35, .2);
+    border-radius: 3px;
+    color: #24292e;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-right: 5px;
+    padding: 3px 10px;
+    vertical-align: middle;
+}
+
+.potential-changes__button:hover {
+    background-color: #e6ebf1;
+    background-image: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%);
+    background-position: -.5em;
+    border-color: rgba(27, 31, 35, .35);
+}
+
+.potential-changes__button::after {
+    border: 4px solid transparent;
+    border-top-color: currentColor;
+    content: "";
+    display: inline-block;
+    height: 0;
+    margin-left: 4px;
+    vertical-align: -2px;
+    width: 0;
+}
+
+.potential-changes__dropdown {
+    background-color: white;
+    border: 1px solid rgba(27, 31, 35, .2);
+    display: none;
+    left: 0;
+    padding: 1rem;
+    position: absolute;
+    top: 32px;
+    width: 260px;
+}
+
+.potential-changes__dropdown > :last-child {
+    margin-bottom: 0;
+}
+
+.potential-changes__prs-list {
+    list-style-position: inside;
+}
+
+.potential-changes__dropdown--visible {
+    display: block;
+}

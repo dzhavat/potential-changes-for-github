@@ -4,6 +4,8 @@ Browser extension that shows which pull requests contain changes related to a fi
 
 * [Install in Chrome](https://chrome.google.com/webstore/detail/potential-changes-for-git/neehipoljbecacjcgcceflmlikiadkob)
 
+![Demo](demo.gif)
+
 Warning: This extension is still in a very early stage and it serves as a proof of concept. Please keep that in mind when you use it.
 
 Currently, the extension has the following limitations:

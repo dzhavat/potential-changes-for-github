@@ -1,5 +1,7 @@
 # Potential changes for GitHub
 
+> **Warning**: This extension is still in a very early stage and it serves as a proof of concept. Please keep that in mind when you use it.
+
 Browser extension that shows which pull requests contain changes related to a file.
 
 * [Install in Chrome](https://chrome.google.com/webstore/detail/potential-changes-for-git/neehipoljbecacjcgcceflmlikiadkob)
@@ -8,7 +10,7 @@ Browser extension that shows which pull requests contain changes related to a fi
 
 ![Demo](demo.gif)
 
-Warning: This extension is still in a very early stage and it serves as a proof of concept. Please keep that in mind when you use it.
+
 
 Currently, the extension has the following limitations:
 - Sometimes the button will not appear when you navigate to a file view. Usually refreshing the page solves the problem.

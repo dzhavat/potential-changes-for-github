@@ -45,16 +45,17 @@
     position: absolute;
     top: 32px;
     width: 260px;
+    z-index: 1;
 }
 
 .potential-changes__dropdown > :last-child {
     margin-bottom: 0;
 }
 
-.potential-changes__prs-list {
-    list-style-position: inside;
-}
-
 .potential-changes__dropdown--visible {
     display: block;
+}
+
+.potential-changes__prs-list {
+    list-style-position: inside;
 }

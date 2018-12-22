@@ -1,14 +1,18 @@
 # Potential changes for GitHub
 
-> **Warning**: This extension is still in a very early stage and it serves as a proof of concept. Please keep that in mind when you use it.
-
 Browser extension that shows which pull requests contain changes related to a file.
 
-* [Install in Chrome](https://chrome.google.com/webstore/detail/potential-changes-for-git/neehipoljbecacjcgcceflmlikiadkob)
+> **Warning**: This extension is still in a very early stage and it serves as a proof of concept. Please keep that in mind when you use it.
+
+### Install
+
+* [Chrome extension](https://chrome.google.com/webstore/detail/potential-changes-for-git/neehipoljbecacjcgcceflmlikiadkob)
 
 ### Demo 
 
 ![Demo](demo.gif)
+
+### Limitations
 
 Currently, the extension has the following limitations:
 - It is limited to Public repositories only.

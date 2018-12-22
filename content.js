@@ -3,7 +3,7 @@
 function init() {
   let fileActions = document.querySelector(".file-header .file-actions");
 
-  if (!fileActions) {
+  if (!fileActions || isButtonAlreadyAdded()) {
     return;
   }
 
@@ -47,6 +47,13 @@ function init() {
 
     checkForPotentialChanges(dropdown);
   });
+}
+
+// Needed because `onHistoryStateUpdated` in `background.js`
+// fires twice when navigating between pages
+// Checks whether the button is already added to the page 
+function isButtonAlreadyAdded() {
+  return document.querySelector(".potential-changes");
 }
 
 function showPrivateMessage(dropdownElement) {

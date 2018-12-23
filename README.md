@@ -20,3 +20,13 @@ Currently, the extension has the following limitations:
 - GitHub has a rate limit of 60 requests per hour. Usually same requests are cached but if you want to check multiple files in different repositories, you can quickly "run out" of requests.
 
 Most of the limitations above are there just because I wanted to save time and focused on solving the core idea behind this extension.
+
+## Contributions
+
+You're more than welcome to contribute. There are several things you can do:
+
+* Submit a PR to one of the [issues](https://github.com/dzhavat/potential-changes-for-github/issues).
+* Report bugs.
+* Suggest new ideas.
+* Suggest improvements to the code.
+* Port the extension to another browser.

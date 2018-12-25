@@ -57,43 +57,84 @@ function isButtonAlreadyAdded() {
 }
 
 function showPrivateMessage(dropdownElement) {
-  dropdownElement.innerHTML = `
+  const parser = new DOMParser();
+
+  const htmlString = `
     <p>Thank you for showing interest!</p>
     <p>This repository appears to be <i>Private</i>.</p>
     <p>Requesting PRs of private repositories <strong>requires an access token</strong>.
-    Therefore, this extension is currently limited to <i>Public</i> repositories only.</p>
+    Because of that, this extension is currently limited to <i>Public</i> repositories only.</p>
     <p>If you are interested in knowing more, check out the progress of this feature on 
     its <a href="https://github.com/dzhavat/potential-changes" target="_blank">repo</a>.</p>
   `;
+
+  const parsed = parser.parseFromString(htmlString, 'text/html');
+  const tags = parsed.getElementsByTagName('body')[0].childNodes;
+
+  dropdownElement.innerHTML = '';
+
+  for (const tag of tags) {
+    dropdownElement.appendChild(tag);
+  }
 }
 
 function showTooManyPRsMessage(dropdownElement, numberOfPRs) {
-  dropdownElement.innerHTML = `
+  const parser = new DOMParser();
+
+  const htmlString = `
     <p>Thank you for showing interest!</p>
-    <p>There are <strong>${numberOfPRs}</strong> PRs in this repository. Requesting all of them at once
-    can cause performance issues on your browser.</p>
-    <p>Because of this and due to the fact that this extension is in an early <strong><i>alpha</i></strong> 
-    release, it is currently limited to repositories with less than 10 PRs.</p>
+    <p>There are <strong>${numberOfPRs}</strong> PRs in this repository. Requesting all of them at once can cause performance issues on your browser.</p>
+    <p>Because of this and due to the fact that this extension is in an early <strong><i>alpha</i></strong> release, it is currently limited to repositories with less than 10 PRs.</p>
     <p>If you are interested in knowing more, check out the progress of this feature on 
     its <a href="https://github.com/dzhavat/potential-changes" target="_blank">repo</a>.</p>
   `;
+
+  const parsed = parser.parseFromString(htmlString, 'text/html');
+  const tags = parsed.getElementsByTagName('body')[0].childNodes;
+
+  dropdownElement.innerHTML = '';
+
+  for (const tag of tags) {
+    dropdownElement.appendChild(tag);
+  }
 }
 
 function showNoPRsMessage(dropdownElement) {
-  dropdownElement.innerHTML = `
-    <p>There are no pull requests in this repository.</p>
-    <p>That means there are no changes related to this file.</p>
-  `;
+  const p = document.createElement('p');
+
+  const strings = [
+    'There are no pull requests in this repository.',
+    'That means there are no changes related to this file.'
+  ];
+
+  dropdownElement.innerHTML = '';
+
+  for (const string of strings) {
+    const elem = p.cloneNode();
+    elem.textContent = string;
+
+    dropdownElement.appendChild(elem);
+  }
 }
 
 function showNoMatchingPRs(dropdownElement) {
-  dropdownElement.innerHTML = `
-    <p>There are no pull requests that contain changes related to this file.</p>
-  `;
+  const p = document.createElement('p');
+
+  dropdownElement.innerHTML = '';
+
+  p.textContent = 'There are no pull requests that contain changes related to this file.';
+  
+  dropdownElement.appendChild(p);
 }
 
 function checkForPotentialChanges(dropdownElement) {
-  dropdownElement.innerHTML = `<p>Analyzing pull requests...</p>`;
+  const p = document.createElement('p');
+
+  const elem = p.cloneNode();
+  elem.textContent = 'Analyzing pull requests...';
+
+  dropdownElement.innerHTML = '';
+  dropdownElement.appendChild(elem);
 
   const pathname = new URL(location.href).pathname;
   const fileToMatch = pathname
@@ -131,10 +172,19 @@ function checkForPotentialChanges(dropdownElement) {
       return showMatchingPRs(dropdownElement, matchingPRs);
     })
     .catch(error => {
-      dropdownElement.innerHTML = `
-        <p>There was a problem when trying to get the list of pull requests.</p>
-        <p>Error: ${error.message}</p>
-      `;
+      const strings = [
+        `There was a problem when trying to get the list of pull requests.`,
+        `Error: ${error.message}.`
+      ];
+
+      dropdownElement.innerHTML = '';
+
+      for (const string of strings) {
+        const elem = p.cloneNode();
+        elem.textContent = string;
+
+        dropdownElement.appendChild(elem);
+      }
     });
 }
 
@@ -156,12 +206,17 @@ function showMatchingPRs(dropdownElement, matchingPRs) {
     ul.appendChild(listItem);
   });
 
+  dropdownElement.innerHTML = '';
+
+  let p = document.createElement('p');
+
   if (matchingPRs.length === 1) {
-    dropdownElement.innerHTML = `<p>One pull request contains changes related to this file:</p>`;
+    p.textContent = 'One pull request contains changes related to this file:';
   } else {
-    dropdownElement.innerHTML = `<p>${matchingPRs.length} pull requests contain changes related to this file:</p>`;
+    p.textContent = `${matchingPRs.length} pull requests contain changes related to this file:`;
   }
 
+  dropdownElement.appendChild(p);
   dropdownElement.appendChild(ul);
 }
 

@@ -4,15 +4,15 @@ Browser extension that shows which pull requests contain changes related to a fi
 
 > **Warning**: This extension is still in a very early stage and it serves as a proof of concept. Please keep that in mind when you use it.
 
-### Install
+## Install
 
 * [Chrome extension](https://chrome.google.com/webstore/detail/potential-changes-for-git/neehipoljbecacjcgcceflmlikiadkob)
 
-### Demo 
+## Demo 
 
 ![Demo](demo.gif)
 
-### Limitations
+## Limitations
 
 Currently, the extension has the following limitations:
 - It is limited to Public repositories only.
@@ -20,6 +20,13 @@ Currently, the extension has the following limitations:
 - GitHub has a rate limit of 60 requests per hour. Usually same requests are cached but if you want to check multiple files in different repositories, you can quickly "run out" of requests.
 
 Most of the limitations above are there just because I wanted to save time and focused on solving the core idea behind this extension.
+
+## Development
+
+1. Go to [chrome://extensions/](chrome://extensions/) page
+2. Toggle “Developer mode” in the upper right corner
+3. Click the “Load unpacked” button
+4. Select the folder with the source files
 
 ## Contributions
 

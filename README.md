@@ -7,6 +7,7 @@ Browser extension that shows which pull requests contain changes related to a fi
 ## Install
 
 * [Chrome extension](https://chrome.google.com/webstore/detail/potential-changes-for-git/neehipoljbecacjcgcceflmlikiadkob)
+* [Firefox addon](https://addons.mozilla.org/en-US/firefox/addon/potential-changes-for-github/)
 
 ## Demo 
 
@@ -21,12 +22,22 @@ Currently, the extension has the following limitations:
 
 Most of the limitations above are there just because I wanted to save time and focused on solving the core idea behind this extension.
 
-## Development
+## Running locally
 
-1. Go to [chrome://extensions/](chrome://extensions/) page
-2. Toggle “Developer mode” in the upper right corner
-3. Click the “Load unpacked” button
-4. Select the folder with the source files
+### Chrome
+
+1. Go to `chrome://extensions/` page.
+2. Toggle “Developer mode” in the upper right corner.
+3. Click the “Load unpacked” button.
+4. Select the `source` directory.
+
+### Firefox
+
+1. Open the `source` directory.
+2. Make an archive containing all files within the directory.
+3. Open Firefox and go to `about:debugging` page.
+4. Click the “Load Temporary Add-on...” button.
+5. Select the archive created on step 1.
 
 ## Contributions
 

@@ -1,3 +1,7 @@
+## 0.4.0 (2018-12-25)
+
+* Feature: Make the extension compatible with Firefox [#10](https://github.com/dzhavat/potential-changes-for-github/pull/10)
+
 ## 0.3.0 (2018-12-22)
 
 * Fix: Disappearing button on page navigation [#4](https://github.com/dzhavat/potential-changes-for-github/pull/4)

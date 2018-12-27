@@ -239,9 +239,14 @@ function getPRs() {
 
 function getNumberOfPRs() {
   let prs = 0;
+  const counterElem = document.querySelector('nav.js-repo-nav > span:nth-child(3) span.Counter');
+
+  if (!counterElem) {
+    return prs;
+  }
 
   try {
-    prs = parseInt(document.querySelector('nav.js-repo-nav > span:nth-child(3) span.Counter').textContent, 10);
+    prs = parseInt(counterElem.textContent.replace(',', ''), 10);
   } catch (e) {}
 
   return prs;

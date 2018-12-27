@@ -1,3 +1,7 @@
+## 0.4.1 (2018-12-28)
+
+Fix: Function returning incorrect number of PRs [856bab](https://github.com/dzhavat/potential-changes-for-github/commit/856bab3ab60b9b71c887ec59e8f862b0473566a9)
+
 ## 0.4.0 (2018-12-25)
 
 * Feature: Make the extension compatible with Firefox [#10](https://github.com/dzhavat/potential-changes-for-github/pull/10)

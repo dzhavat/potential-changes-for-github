@@ -199,7 +199,7 @@ function showMatchingPRs(dropdownElement, matchingPRs) {
     const link = document.createElement("a");
     link.setAttribute("href", pr.html_url);
     link.setAttribute("target", "_blank");
-    link.innerText = pr.title;
+    link.textContent = pr.title;
 
     listItem.appendChild(link);
 

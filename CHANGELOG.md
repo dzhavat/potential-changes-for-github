@@ -1,6 +1,10 @@
+## 0.5.0 (2019-01-01)
+
+* Refactor: Replace `webNavigation` permission in favor of `pjax:end` event [bd92cf](https://github.com/dzhavat/potential-changes-for-github/commit/bd92cf54b797da06a4c03b6414460eb0693d2799)
+
 ## 0.4.1 (2018-12-28)
 
-Fix: Function returning incorrect number of PRs [856bab](https://github.com/dzhavat/potential-changes-for-github/commit/856bab3ab60b9b71c887ec59e8f862b0473566a9)
+* Fix: Function returning incorrect number of PRs [856bab](https://github.com/dzhavat/potential-changes-for-github/commit/856bab3ab60b9b71c887ec59e8f862b0473566a9)
 
 ## 0.4.0 (2018-12-25)
 

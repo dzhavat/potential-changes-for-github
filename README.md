@@ -43,8 +43,9 @@ Most of the limitations above are there just because I wanted to save time and f
 
 You're more than welcome to contribute. There are several things you can do:
 
-* Submit a PR to one of the [issues](https://github.com/dzhavat/potential-changes-for-github/issues).
 * Report bugs.
+* Submit a pull request to one of the [issues](https://github.com/dzhavat/potential-changes-for-github/issues).
+* Review pull requests.
 * Suggest new ideas.
 * Suggest improvements to the code.
 * Port the extension to another browser.

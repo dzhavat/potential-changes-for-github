@@ -49,8 +49,6 @@ function init() {
   });
 }
 
-// Needed because `onHistoryStateUpdated` in `background.js`
-// fires twice when navigating between pages
 // Checks whether the button is already added to the page 
 function isButtonAlreadyAdded() {
   return document.querySelector(".potential-changes");
@@ -255,5 +253,7 @@ function getNumberOfPRs() {
 function isPrivate() {
   return !!document.querySelector('.pagehead h1.private');
 }
+
+document.addEventListener('pjax:end', init);
 
 init();

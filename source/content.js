@@ -163,7 +163,7 @@ function showMatchingPRs(dropdownElement, matchingPRs) {
 
 function getPRs() {
   const [owner, repo] = location.pathname.split("/").slice(1, 3);
-  const fileToMatch = pathname
+  const fileToMatch = location.pathname
     .split("/")
     .slice(5)
     .join("/");

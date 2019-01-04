@@ -3,7 +3,7 @@
 function init() {
   let fileActions = document.querySelector(".file-header .file-actions");
 
-  if (!fileActions || isButtonAlreadyAdded()) {
+  if (!isSingleFile() || !fileActions) {
     return;
   }
 
@@ -49,11 +49,6 @@ function init() {
   });
 }
 
-// Checks whether the button is already added to the page 
-function isButtonAlreadyAdded() {
-  return document.querySelector(".potential-changes");
-}
-
 function showPrivateMessage(dropdownElement) {
   const parser = new DOMParser();
 
@@ -95,6 +90,10 @@ function showTooManyPRsMessage(dropdownElement, numberOfPRs) {
   for (const tag of tags) {
     dropdownElement.appendChild(tag);
   }
+}
+
+function isSingleFile() {
+  return /\/blob\//.test(location.pathname);
 }
 
 function showNoPRsMessage(dropdownElement) {

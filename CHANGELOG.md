@@ -1,3 +1,7 @@
+## 0.5.1 (2019-01-04)
+
+* Fix: Improve how single file page is detected [516597](https://github.com/dzhavat/potential-changes-for-github/commit/5165970fc66b00d87cef09c162ebd4f8935b6ea9)
+
 ## 0.5.0 (2019-01-01)
 
 * Refactor: Replace `webNavigation` permission in favor of `pjax:end` event [bd92cf](https://github.com/dzhavat/potential-changes-for-github/commit/bd92cf54b797da06a4c03b6414460eb0693d2799)

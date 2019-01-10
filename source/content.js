@@ -7,7 +7,13 @@ function init() {
     return;
   }
 
-  let wrapper = document.createElement('div');
+  let wrapper = document.querySelector(".potential-changes");
+
+  if (!!wrapper) {
+    wrapper.remove();
+  }
+
+  wrapper = document.createElement('div');
   wrapper.className = 'potential-changes';
 
   let button = document.createElement("button");
@@ -94,6 +100,10 @@ function showTooManyPRsMessage(dropdownElement, numberOfPRs) {
 
 function isSingleFile() {
   return /\/blob\//.test(location.pathname);
+}
+
+function isButtonPresent() {
+  return !!document.querySelector(".potential-changes__button");
 }
 
 function showNoPRsMessage(dropdownElement) {

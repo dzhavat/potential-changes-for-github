@@ -1,3 +1,7 @@
+## 0.5.2 (2019-01-10)
+
+* Fix: Button appearing multiple times [2ba1e2](https://github.com/dzhavat/potential-changes-for-github/commit/2ba1e28a3097f33005aeaf4e5c287f717a36f7fa)
+
 ## 0.5.1 (2019-01-04)
 
 * Fix: Improve how single file page is detected [516597](https://github.com/dzhavat/potential-changes-for-github/commit/5165970fc66b00d87cef09c162ebd4f8935b6ea9)

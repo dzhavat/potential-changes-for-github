@@ -10,7 +10,7 @@ function escapeHTML(input) {
 }
 
 function init() {
-  let fileActions = document.querySelector(".file-header .file-actions");
+  let fileActions = document.querySelector(".Box-header.d-flex .BtnGroup");
 
   if (!isSingleFile() || !fileActions) {
     return;

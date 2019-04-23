@@ -75,8 +75,8 @@ function showPrivateMessage(dropdownElement) {
 
 function showTooManyPRsMessage(dropdownElement, numberOfPRs) {
   dropdownElement.innerHTML = `
-    <p>There are <strong>${numberOfPRs}</strong> PRs in this repository. Requesting all of them at once can cause performance issues on your browser.</p>
-    <p>Because of this and due to the fact that this extension is in an early <strong><i>alpha</i></strong> release, it is currently limited to repositories with less than 10 PRs.</p>
+    <p>There are <strong>${numberOfPRs}</strong> PRs in this repository. Requesting all of them at once might result in performance issues.</p>
+    <p>Because of this, this extension is currently limited to repositories with less than 10 PRs.</p>
     <p>If you are interested in knowing more, check out the progress of this feature on 
     its <a href="https://github.com/dzhavat/potential-changes" target="_blank">repo</a>.</p>
   `;

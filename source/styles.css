@@ -1,5 +1,5 @@
 .potential-changes {
-    display: inline-block;
+    float: left;
     position: relative;
 }
 

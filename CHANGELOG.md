@@ -1,3 +1,7 @@
+## 0.6.0 (2019-04-25)
+
+* Fix: Button not appearing [8f551](https://github.com/dzhavat/potential-changes-for-github/commit/8f551f841e51c5ddaff08af1601de2db55b2aafd)
+
 ## 0.5.2 (2019-01-10)
 
 * Fix: Button appearing multiple times [2ba1e2](https://github.com/dzhavat/potential-changes-for-github/commit/2ba1e28a3097f33005aeaf4e5c287f717a36f7fa)

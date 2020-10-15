@@ -9,7 +9,7 @@ Browser extension that shows which pull requests contain changes related to a fi
 
 ## Limitations
 
-**Note**: This extension is still a **proof of concept** and as such has the following limitations:
+**Note**: This extension is still a **proof of concept** and has the following limitations:
 
 - It is limited to Public repositories only.
 - It is limited to repositories with 10 or less pull requests.

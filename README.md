@@ -7,18 +7,19 @@ Browser extension that shows which pull requests contain changes related to a fi
 * [Chrome extension](https://chrome.google.com/webstore/detail/potential-changes-for-git/neehipoljbecacjcgcceflmlikiadkob)
 * [Firefox addon](https://addons.mozilla.org/en-US/firefox/addon/potential-changes-for-github/)
 
-## Demo 
-
-![Demo](demo.gif)
-
 ## Limitations
 
-Currently, the extension has the following limitations:
+**Note**: This extension is still a **proof of concept** and as such has the following limitations:
+
 - It is limited to Public repositories only.
 - It is limited to repositories with 10 or less pull requests.
 - GitHub has a rate limit of 60 requests per hour. Usually same requests are cached but if you want to check multiple files in different repositories, you can quickly "run out" of requests.
 
-Most of the limitations above are there just because I wanted to save time and focused on solving the core idea behind this extension.
+Most of the limitations above are there only because I wanted to save time and focused on solving the core idea behind the extension.
+
+## Demo 
+
+![Demo](demo.gif)
 
 ## Running locally
 
@@ -33,7 +34,7 @@ Most of the limitations above are there just because I wanted to save time and f
 
 1. Open the `source` directory.
 2. Make an archive containing all files within the directory.
-3. Open Firefox and go to `about:debugging` page.
+3. Open Firefox and go to `about:debugging#/runtime/this-firefox` page.
 4. Click the “Load Temporary Add-on...” button.
 5. Select the archive created on step 1.
 
@@ -47,3 +48,5 @@ You're more than welcome to contribute. There are several things you can do:
 * Suggest new ideas.
 * Suggest improvements to the code.
 * Port the extension to another browser.
+
+Thank you!

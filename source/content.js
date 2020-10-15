@@ -1,5 +1,4 @@
-"use strict";
-
+// @ts-check
 function escapeHTML(input) { 
   return input
     .replace(/&/g, '&amp;')
@@ -10,9 +9,9 @@ function escapeHTML(input) {
 }
 
 function init() {
-  let fileActions = document.querySelector(".Box-header.d-flex .BtnGroup");
+  let fileActionButtons = document.querySelector(".Box-header.d-flex .BtnGroup");
 
-  if (!isSingleFile() || !fileActions) {
+  if (!isSingleFile() || !fileActionButtons) {
     return;
   }
 
@@ -27,15 +26,19 @@ function init() {
 
   let button = document.createElement("button");
   button.type = "button";
-  button.className = "potential-changes__button";
+  button.className = "btn btn-sm mr-2";
   button.textContent = "Potential changes";
+
+  let dropdownCarret = document.createElement('span');
+  dropdownCarret.className = 'dropdown-caret';
 
   let dropdown = document.createElement('div');
   dropdown.className = 'potential-changes__dropdown';
 
+  button.append(dropdownCarret);
   wrapper.append(button, dropdown);
 
-  fileActions.prepend(wrapper);
+  fileActionButtons.prepend(wrapper);
 
   button.addEventListener("click", function(event) {
     if (dropdown.classList.contains('potential-changes__dropdown--visible')) {
@@ -87,7 +90,7 @@ function isSingleFile() {
 }
 
 function isButtonPresent() {
-  return !!document.querySelector(".potential-changes__button");
+  return !!document.querySelector(".potential-changes > button");
 }
 
 function showNoPRsMessage(dropdownElement) {
@@ -196,18 +199,18 @@ function getPRs() {
 }
 
 function getNumberOfPRs() {
-  let prs = 0;
-  const counterElem = document.querySelector('nav.js-repo-nav > span:nth-child(3) span.Counter');
+  let numberOfPRs = 0;
+  const counterElement = document.querySelector('nav.js-repo-nav > ul > li:nth-child(3) span.Counter');
 
-  if (!counterElem) {
-    return prs;
+  if (!counterElement) {
+    return numberOfPRs;
   }
 
   try {
-    prs = parseInt(counterElem.textContent.replace(',', ''), 10);
+    numberOfPRs = parseInt(counterElement.textContent.replace(',', ''), 10);
   } catch (e) {}
 
-  return prs;
+  return numberOfPRs;
 }
 
 function isPrivate() {

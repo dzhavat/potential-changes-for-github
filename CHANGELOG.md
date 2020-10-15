@@ -1,3 +1,8 @@
+## 0.7.0 (2020-10-15)
+
+* Fix: Extension not working properly [05896](https://github.com/dzhavat/potential-changes-for-github/commit/058965f8be037a88a3d452eb0e698b5771772ce6)
+* Refactor: Remove custom styling for the button. Use native GitHub classes instead [2345a](https://github.com/dzhavat/potential-changes-for-github/commit/2345ae4180c281b392c6a545f386f658f6d8485a)
+
 ## 0.6.0 (2019-04-25)
 
 * Fix: Button not appearing [8f551](https://github.com/dzhavat/potential-changes-for-github/commit/8f551f841e51c5ddaff08af1601de2db55b2aafd)
